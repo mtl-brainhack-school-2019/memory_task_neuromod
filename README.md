@@ -18,6 +18,9 @@ s = import shutil
 s = shutil.move(files,destination) #works just like the Unix Shell mv command
 ```
 ## Image stimuli preprocessing
-### To make sure all images in a given directory (i.e. a semantic category), execute the following function on the previously downloaded folders after extraction.
-[Link to the function]()
+### To make sure all images in a given directory (i.e. a semantic category) are formatted appropriately, execute the following function on the previously downloaded folders after extraction.
+```python
+s = square_resize('categoryNameHere')
+```
+
 
