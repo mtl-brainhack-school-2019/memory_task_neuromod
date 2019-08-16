@@ -9,7 +9,7 @@ s = pip install psychopy
 ```
 ### Download and extract the following folders from our drive.
 ## PLEASE, do not remove, add, or alter these folders in any way. These images represent a lot of work and are precious for the project.
-{https://drive.google.com/open?id=1yRQNBdIDqwgnCxOKrC5S4e4RgFWN1b9F}
+{https://drive.google.com/drive/folders/1FbHI3wNBzHRyp8FSZ6wLiyWRXulq-mV9?usp=sharing}
 #### From this Drive directory, download the clothing, food and furniture folders
 #### Make sure these folders are in your current working directory alongside the python file
 ##### You can use the shutil module to easily navigate through directories (similar to how the Unix Shell commands work)
