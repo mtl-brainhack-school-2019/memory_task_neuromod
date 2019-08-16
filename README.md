@@ -1,4 +1,5 @@
 # memory_task_neuromod
+[logo]:logo_neuromod.jpg "Project Logo"
 ### The aim is to replicate the CIMA-Q memory task with open tools
 #### Protocol: 15 images are randomly shown to subject in 1/4 of screen. 1 target image is shown twice. Subject must press a key when the                  repeated target image is displayed and indicate in wich quadrant it previously appeared.
 ##### {https://github.com/mtl-brainhack-school-2019/memory_task_neuromod/blob/master/projectAbstract.md "projectAbstract"}
