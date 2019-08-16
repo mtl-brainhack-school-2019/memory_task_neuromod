@@ -8,7 +8,6 @@
 s = pip install psychopy
 ```
 ### Download and extract the following folders from our drive.
-## PLEASE, do not remove, add, or alter these folders in any way. These images represent a lot of work and are precious for the project.
 {https://drive.google.com/drive/folders/1FbHI3wNBzHRyp8FSZ6wLiyWRXulq-mV9?usp=sharing}
 #### From this Drive directory, download the clothing, food and furniture folders
 #### Make sure these folders are in your current working directory alongside the python file
