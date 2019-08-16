@@ -1,6 +1,7 @@
 # memory_task_neuromod
 ### The aim is to replicate the CIMA-Q memory task with open tools
 #### Protocol: 15 images are randomly shown to subject in 1/4 of screen. 1 target image is shown twice. Subject must press a key when the                  repeated target image is displayed and indicate in wich quadrant it previously appeared.
+##### Complete memory task abstract here: {}
 ## Prerequisites
 ### Download, extract (if compressed) and install Psychopy toolbox
 {https://www.psychopy.org/download.html}
