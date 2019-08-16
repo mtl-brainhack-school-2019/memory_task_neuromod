@@ -27,5 +27,10 @@ s = conda install -c anaconda spyder
 s = spyder square_resize.py
 s = square_resize('categoryNameHere')
 ```
-
+## Next objectives
+- [] Create iterable trial logbook class (containing stimuli, position, key and time pressed
+- [] Save the trial logbook in a convinient format
+- [] Initiate a stimuli selection function to ensure proper randomization without replacement - except for trials target images
+###### Determine if whether or not to define a special object class for target images
+- [] Continue compiling creative commons complex images
  
