@@ -4,9 +4,20 @@
 ## Prerequisites
 ### Download, extract (if compressed) and install Psychopy toolbox
 {https://www.psychopy.org/download.html}
+```python
+s = pip install psychopy
+```
 ### Download and extract the following folders from our drive.
 ## PLEASE, do not remove, add, or alter these folders in any way. These images represent a lot of work and are precious for the project.
-[Furniture]: {https://drive.google.com/open?id=1wzkHZWlJmHd4EwQwNYfPe0whxXadKjwJ}
-[Food]: {https://drive.google.com/open?id=1FkrL9e2BYPqm-O_xbMWjcHca3YIyuOpO}
-[Clothing]: {https://drive.google.com/open?id=1WIRvbfTjUTD08N3oeL0Qy4H9m-hOfXjV}
-### Make sure these folders are in your current working directory alongside the python code.
+{https://drive.google.com/open?id=1yRQNBdIDqwgnCxOKrC5S4e4RgFWN1b9F}
+#### From this Drive directory, download the clothing, food and furniture folders
+#### Make sure these folders are in your current working directory alongside the python file
+##### You can use the shutil module to easily navigate through directories (similar to how the Unix Shell commands work)
+```python
+s = import shutil
+s = shutil.move(files,destination) #works just like the Unix Shell mv command
+```
+## Image stimuli preprocessing
+### To make sure all images in a given directory (i.e. a semantic category), execute the following function on the previously downloaded folders after extraction.
+[Link to the function]()
+
