@@ -15,16 +15,7 @@ from psychopy import core
 from psychopy import event
 from psychopy import visual #help(visual.ImageStim)
 import random
-import shutil
-import requests
-import urllib3
-http = urllib3.PoolManager()
-r = http.requests.get('GET', 'https://api.github.com/user')
-url = 'http://i3.ytimg.com/vi/J---aiyznGQ/mqdefault.jpg'
-#Download clothing category
-#Default file destination is Downloads folder. You need to move these unzipped files to your cwd
-shutil.move()
-win = visual.Window(size=(1000, 1000), color=(0, 0 , 0), units = 'pix')
+
 
 cwd = os.getcwd() #Relative path to the image folder - make sure to have it it your cwd
 imPaths = []#Lists all images full paths
@@ -57,25 +48,25 @@ for item in imPaths:
         imageCounter += 1
 print(*imageSelection, sep = '\n')
 
-while stimCounter <= nStim:
-    image = visual.ImageStim(win,image=imageSelection[random.randint(0, nStim-1)],color=(1,1,1), pos = (randSign()*250, randSign()*250), size = (500, 500))
-    image.draw()
-    win.flip()
-    core.wait(2.0)
-    stimCounter += 1
-    key_pressed.append(event.getKeys(keyList=[0,1,2,3], modifiers=False, timeStamped=True))
-    class stimList:
+win = visual.Window(size=(1000, 1000), color=(0, 0 , 0), units = 'pix')
+class stimList:
         def __init__(self, image, position, keyPressed):
             self.image = image.image
             self.position = image.pos
             self.keyPressed = event.getKeys(keyList=[0,1,2,3], modifiers=False, timeStamped=True)
-
+while stimCounter <= nStim:
+    image = visual.ImageStim(win,image=imageSelection[random.randint(0, nStim-1)],color=(1,1,1), pos = (randSign()*250, randSign()*250), size = (500, 500))
+    image.draw()
+    win.flip()
+    core.wait(1.0)
+    stimCounter += 1
+    key_pressed.append(event.getKeys(keyList=[0,1,2,3], modifiers=False, timeStamped=True))
     #stimList.append({'image':image.image, 'position':image.pos})
-print(*stimList, sep = '\n')
+print(stimList.image, sep = '\n')
 win.close()
 
-class stimList:
-    def __init__(self, image, position, key_pressed):
-        self.image = image.image
-        self.position = image.pos
-        self.key_pressed = event.getKeys(keyList=[0,1,2,3], modifiers=False, timeStamped=True)
+#class stimList:
+#    def __init__(self, image, position, key_pressed):
+#        self.image = image.image
+#        self.position = image.pos
+#        self.key_pressed = event.getKeys(keyList=[0,1,2,3], modifiers=False, timeStamped=True)
