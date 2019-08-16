@@ -17,9 +17,12 @@ s = import shutil
 s = shutil.move(files,destination) #works just like the Unix Shell mv command
 ```
 ## Image stimuli preprocessing
-### To make sure all images in a given directory (i.e. a semantic category) are formatted appropriately, execute the following function on the previously downloaded folders after extraction.
+### To make sure all images in a given directory (i.e. a semantic category) are formatted appropriately, execute the following function on the previously downloaded folders after extraction. I use the Spyder IDE to edit and run python files.
+
 {https://github.com/mtl-brainhack-school-2019/memory_task_neuromod/blob/master/square_resize.py "Link to function script"}
 ```python
+s = conda install -c anaconda spyder 
+s = spyder square_resize.py
 s = square_resize('categoryNameHere')
 ```
 
