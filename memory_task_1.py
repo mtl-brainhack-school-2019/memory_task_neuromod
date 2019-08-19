@@ -26,7 +26,7 @@ class imStims:
                         imPaths.append(os.path.join(r, fileName))
             return imPaths
         
-        def imSelect(nStim):
+        def imSelect(nStim, imPaths):
             imSelect = []
             imCounter = 1
             for item in imPaths:
