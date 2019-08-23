@@ -17,14 +17,6 @@ class Category:
             return sorted(filePathlist)
         imMatrix = [filePathlist(os.path.join(self.maindir,dirname)) for dirname in os.listdir(self.maindir)]
         return tuple(sorted(imMatrix))
-    
-def imSelect(categories, nStim):
-    for category in categories:
-        [random.sample(filePathlist, nStim) for filePathlist in category]
-    return Category.imSelect(nStim)
-
-clothing = Category('500_clothing').categCreate()
-furniture = Category('500_furniture').categCreate()
 
 
 def loadStims():
@@ -33,6 +25,18 @@ def loadStims():
     return categories
 
 categories = loadStims()
+ 
+def imSelect(categories, nStim):
+    for category in categories:
+        trialStims = [random.sample(filePathlist, nStim) for filePathlist in category]
+    return trialStims
+
+trial1 = imSelect(categories, 14)
+#clothing = Category('500_clothing').categCreate()
+#furniture = Category('500_furniture').categCreate()
+
+
+
 
 
 #props = <some list here>
