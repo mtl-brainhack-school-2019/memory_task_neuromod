@@ -15,29 +15,27 @@ from psychopy import event
 from psychopy import visual #help(visual.ImageStim)
 import random
 
-class imStims:
-    def __init__(self, imPaths, imSelect):
-        def imPaths():
-            cwd = os.getcwd() #Relative path to the image folder - make sure to have it it your cwd
-            imPaths = []#Lists all images full paths
-            for r, d, f in os.walk(cwd):
-                for fileName in f:
-                    if '.jpg' in fileName:
-                        imPaths.append(os.path.join(r, fileName))
-            return imPaths
-        
-        def imSelect(nStim):
-            imSelect = []
-            imCounter = 1
-            for item in imPaths:
-                while imCounter <= nStim:
-                    imSelect.append(imPaths[random.randint(0, len(imPaths))])
-                    imCounter +=1
-            return imSelect
+class Category:
+    def __init__(self, maindir): #define category name and its folder name (folder must be in cwd!)
+        self.maindir = maindir
+    def categCreate(self):
+        def filePathlist(maindir):
+            filePathlist = []
+            for maindir, dirnames, filenames in os.walk(os.path.abspath(maindir)):
+                 for filename in filenames:
+                     if '.jpg' in filename:
+                         filePathlist.append(os.path.join(maindir,filename))
+            return tuple(sorted(filePathlist))
+        imMatrix = {filePathlist(os.path.join(self.maindir,dirname)) for dirname in os.listdir(self.maindir)}
+        return imMatrix
 
-
-
-
+def loadStims(nStim):
+    maindirs = os.listdir(os.getcwd())
+    categories = [Category(maindir).categCreate() for maindir in maindirs if '500_' in maindir]
+    def imSelect(self, nStim):
+        for category in categories:
+            [random.sample(filePathlist, nStim) for filePathlist in category]
+    return categories
 
 def randSign():#randomly generates 1 or -1 (quadrant position)
     if random.random() < 0.5:
@@ -51,6 +49,7 @@ class stimList:
             self.image = image.image
             self.position = image.pos
             self.keyPressed = event.getKeys(keyList=[0,1,2,3], modifiers=False, timeStamped=True)
+stimCounter = 1
 while stimCounter <= nStim:
     image = visual.ImageStim(win,image=imSelect[random.randint(0, nStim-1)],color=(1,1,1), pos = (randSign()*250, randSign()*250), size = (500, 500))
     image.draw()
