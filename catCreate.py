@@ -1,5 +1,12 @@
 # -*- coding: utf-8 -*-
 """
+Created on Wed Aug 21 02:36:14 2019
+
+@author: Francois
+"""
+
+# -*- coding: utf-8 -*-
+"""
 Created on Sat Aug 17 17:18:53 2019
 
 @author: Francois
@@ -10,24 +17,22 @@ import os
 
 
 def catCreate(maindir):
+    categdict = {}
     def filePathlist(maindir):
         filePathlist = []
+        tuple(dirpathlist) = []
         for mainpath, dirnames, filenames in os.walk(os.path.abspath(maindir)):
-            for filename in filenames:
-                if '.jpg' in filename:
-                    filePathlist.append(os.path.join(mainpath, filename))
+            for dirname in dirnames:
+                for filename in filenames:
+                    if '.jpg' in filename:
+                        filePathlist.append(os.path.join(mainpath, filename))
+    camisole = filePathlist('500_clothing\\500_clothing_camisole')
         return filePathlist
-    for dirname in listdir(maindir):
-        if '500_' in dirname:
-            
-    imList = filePathlist()
-#    camisole = filePathlist('500_clothing\\500_clothing_camisole')
-    for categdir, subcatNames, imageNames in os.walk(os.path.abspath(maindir)):
+    for categName, subcatNames, imageNames in os.walk(os.path.abspath(maindir)):
         for subcatName in subcatNames:
-            subcatNames.insert(len(subcatNames),tuple(filePathlist(categdir)))
-            tupsubcatNames = tuple(subcatNames)
-            category = dict(zip(maindir,tupsubcatNames))
-    return category
+            subcat = filePathlist(os.path.abspath(os.path.join(categName, subcatName)))
+            categdict = dict(zip(tuple(subcatNames),subcat))
+    return categdict
 clothing = catCreate('500_clothing')
 
     
