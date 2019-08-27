@@ -4,7 +4,7 @@
 [logo_neuromod]: https://raw.githubusercontent.com/mtl-brainhack-school-2019/memory_task_neuromod/master/logo_neuromod.jpg "Logo on web page"
 ### The aim of this code is to program an fMRI experiment very similar the CIMA-Q memory task with open tools
 
-#### Protocol: 15 images are randomly shown to subject in one of four quadrants on screen. 1 target image is shown twice. Subject must press a key when the repeated target image is displayed and indicate in wich quadrant it previously appeared.
+#### Protocol: 15 images are randomly shown to subject in one of four quadrants on screen. 1 target image is shown twice. Subject must press a key when the repeated target image is displayed and indicate in which quadrant it previously appeared.
 ##### {https://github.com/mtl-brainhack-school-2019/memory_task_neuromod/blob/master/projectAbstract.md "projectAbstract"}
 
 ## Prerequisites
