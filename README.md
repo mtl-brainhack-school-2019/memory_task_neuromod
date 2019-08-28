@@ -6,6 +6,7 @@
 #### A Brief Introduction to Cognitive Neuroscience: {https://drive.google.com/file/d/18pzaJ2LAO5HN4JsgCkx1rnSsju32KLrN/view?usp=sharing}
 #### The aim of this code is to program an fMRI experiment very similar the CIMA-Q memory task with open tools.
 #### Protocol: 15 images are randomly shown to subject in one of four quadrants on screen. 1 target image is shown twice. Subject must press a key when the repeated target image is displayed and indicate in which quadrant it previously appeared.
+###### The experiment actually shows 12 unique images and a target instead of 14 unique and a target to prevent needing to download any more heavy image category folder.
 ##### See project abstract here: {https://github.com/mtl-brainhack-school-2019/memory_task_neuromod/blob/master/projectAbstract.md "projectAbstract"}
 
 
@@ -47,4 +48,3 @@ s = spyder square_resize.py
 - [] Randomize the presentation of either target, image distractor or noisy distractor across trials.
 - [] Adapt the demo code to the main experimental code
 - [] Continue compiling creative commons complex images
- 
