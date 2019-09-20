@@ -43,8 +43,8 @@ s = spyder square_resize.py
 ## Next objectives
 - [x] Create a class (image matrix) containing all images in their respective subcategories and categories to access them all.
 - [x] Initiate a stimuli selection function to ensure proper randomization without replacement across each subcategory and categories.
-- [] Create a class containing all images that will be repeated after each trial
+- [x] Create a class containing all images that will be repeated after each trial
 - [] Create a noisy image stimulus (distractor) showing up at random moments to avoid habituation phenomenon in subjects brain activity.
-- [] Randomize the presentation of either target, image distractor or noisy distractor across trials.
-- [] Adapt the demo code to the main experimental code
+- [] IN PROGRESS: missing noisy image - Randomize the presentation of either target, image distractor or noisy distractor across trials.
+- [] IN PROGRESS: Adapt the demo code to the main experimental code
 - [] Continue compiling creative commons complex images
