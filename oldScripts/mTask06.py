@@ -16,7 +16,10 @@ from psychopy import visual
 from typing import Sequence
 
 def flatten(nestedlst):  # Returns a list containing all items listed in a list of sublists (for any nesting level) on the same level
-	return [bottomElem for sublist in nestedlst for bottomElem in (flatten(sublist) if (isinstance(sublist, Sequence) and not isinstance(sublist, str)) else [sublist])]
+	return [bottomElem for sublist in nestedlst 
+           for bottomElem in (flatten(sublist) 
+           if (isinstance(sublist, Sequence) and not isinstance(sublist, str)) 
+           else [sublist])]
 
 def random_insert(lst, item): # Insert element to random index in a list 
     return lst.insert(rb(len(lst)+1), item)

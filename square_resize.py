@@ -11,9 +11,27 @@ import os
 from tqdm import tqdm
 
 def square_resize(category_name):
+    """Creates a copy of directory of images containing
+       resized to 500x500 pixels square image copies 
+       of images contained in directory (category_name).
+    ----------------------------------------------------
+    Parameters:
+        category_name: type = str
+                       "Name of image directory. Must be
+                       in current working directory"
+    ----------------------------------------------------
+    Variables:
+        cwd: type = str
+        cat_path: type = str
+        images: type = list
+    ------------------------
+    Return:
+        none
+    """
     cwd = os.getcwd()
     cat_path = cwd +'\\'+ category_name
-    images = [f for f in glob.glob(cat_path +  "**/**/**/*.jpg", recursive=True)]
+    images = [f for f in glob.glob(cat_path +  "**/**/**/*.jpg",
+                                   recursive=True)]
     for im_path in tqdm(images):
         subcat_path, im_name = os.path.split(im_path)
         subcat_name = os.path.basename(subcat_path)
@@ -30,6 +48,10 @@ def square_resize(category_name):
             new_category_path = os.path.join(cwd, '500_' + category_name)
             os.system("mkdir {}".format(new_category_path))
 
-            new_subcat_path = os.path.join(new_category_path, "500_"+subcat_name)
+            new_subcat_path = os.path.join(new_category_path,
+                                           "500_"+subcat_name)
             os.system("mkdir {}".format(new_subcat_path))
-            imResized.save(os.path.join(new_subcat_path, "500_"+im_name), 'JPEG', quality = 90)
+            imResized.save(os.path.join(new_subcat_path, 
+                                        "500_"+im_name),
+                           'JPEG', 
+                           quality = 90)
